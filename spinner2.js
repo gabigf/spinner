@@ -7,20 +7,19 @@ const spinner = () => {
 
   while (fullSpin > 0) {
     if (fullSpin === 1) {
-     spinnerArr = spinnerArr.slice(1);
+      spinnerArr = spinnerArr.slice(1);
     }
     for (const val of spinnerArr) {
       setTimeout(() => {
         process.stdout.write('\r' + val);
         tracker++;
-        if(tracker === (arrLength * 2) - 1) {
-            console.log('');
+        if (tracker === (arrLength * 2) - 1) {
+          console.log('');
         }
-        
       }, delay);
-      delay += 200; 
+      delay += 200;
     }
     fullSpin--;
   }
-}
+};
 spinner();
